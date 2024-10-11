@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Podcast Generator</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Podcast Generator</h1>
+        <div id="topicInput">
+            <label for="topic">Enter content for the podcast:</label>
+            <textarea id="topic" name="topic" rows="6" required></textarea>
+            <button onclick="generatePodcastScript()">Generate Podcast</button>
+        </div>
+        <div id="audienceQuestionInput" class="hidden">
+            <label for="question">Ask an audience question:</label>
+            <input type="text" id="question" name="question">
+            <button onclick="addAudienceQuestion()">Submit Question</button>
+        </div>
+        <div id="avatarContainer">
+            <div id="avatar1" class="avatar">
+                <div class="pulse"></div>
+                <div class="visualizer">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <div id="avatar2" class="avatar">
+                <div class="pulse"></div>
+                <div class="visualizer">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+        <div id="statusMessage" class="hidden"></div>
+        <div id="retryMessage" class="hidden"></div>
+    </div>
+    <div id="notification"></div>
+    <script src="static/script.js"></script>
+</body>
+</html>
