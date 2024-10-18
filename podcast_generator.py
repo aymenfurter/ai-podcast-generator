@@ -145,9 +145,10 @@ class PodcastGenerator:
             compressed_summary = await self.chain_of_density(summary)
 
             logger.info("Creating podcast outline...")
+            podcast_input = f"## Topic Summary:\n{compressed_summary}\n## Full Document:\n{input_text[:20000]}"
             outline = await self.create_podcast_outline(compressed_summary)
 
-            full_podcast = f"## Talking Points:\n{outline}\n\n## Topic Summary:\n{compressed_summary}"
+            full_podcast = f"## Talking Points:\n{outline}\n\n## Topic Summary:\n{compressed_summary}\n## Full Document:\n{input_text[:20000]}"
             logger.info("Podcast generation completed successfully.")
             return full_podcast
 
